@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
-using TMPro;
 
 //basically, i want a shifting rainbow glow on the title for the game
 //so that is what this script is here for
 public class ColorShift : MonoBehaviour
 {
     public Gradient gradient;
-    public TMP_Text title;
+    public Text title;
 
     private float timer = 0;
     private bool increasingTime = true;
