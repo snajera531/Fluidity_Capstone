@@ -1138,10 +1138,10 @@ MonoBehaviour:
     volume: 0.5
     pitch: 1
     source: {fileID: 0}
-  - loop: 0
-    name: Background_Music
+  - loop: 1
+    name: MainSong
     clip: {fileID: 8300000, guid: c21ea4cd694d2714797550fb97d9415b, type: 3}
-    volume: 0.5
+    volume: 0.05
     pitch: 1
     source: {fileID: 0}
 --- !u!4 &988929292
@@ -1700,7 +1700,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1735842092
 RectTransform:
   m_ObjectHideFlags: 0
