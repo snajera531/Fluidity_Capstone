@@ -135,6 +135,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2561106835822848913, guid: a6e75ea978ec09a4886425862ec75376, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2561106835822848913, guid: a6e75ea978ec09a4886425862ec75376, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2561106835822848913, guid: a6e75ea978ec09a4886425862ec75376, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -177,6 +185,22 @@ PrefabInstance:
     - target: {fileID: 2561106835822848919, guid: a6e75ea978ec09a4886425862ec75376, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979103156773736701, guid: a6e75ea978ec09a4886425862ec75376, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979103156773736701, guid: a6e75ea978ec09a4886425862ec75376, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: eeb21e1f92b5391418582a1942c36121, type: 2}
+    - target: {fileID: 8790126928888492162, guid: a6e75ea978ec09a4886425862ec75376, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8790126928888492162, guid: a6e75ea978ec09a4886425862ec75376, type: 3}
+      propertyPath: m_FlipY
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6e75ea978ec09a4886425862ec75376, type: 3}
