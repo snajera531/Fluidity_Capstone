@@ -27,6 +27,7 @@ public class UIManager : MonoBehaviour
 
     public GameObject creditsPanel;
     public GameObject mainMenuPanel;
+    public GameObject settingsPanel;
 
     void Start()
     {
@@ -34,18 +35,28 @@ public class UIManager : MonoBehaviour
         Cursor.visible = true;
         creditsPanel.SetActive(false);
         mainMenuPanel.SetActive(true);
+        settingsPanel.SetActive(false);
     }
 
     public void MainMenu()
     {
         creditsPanel.SetActive(false);
         mainMenuPanel.SetActive(true);
+        settingsPanel.SetActive(false);
     }
 
     public void Credits()
     {
         creditsPanel.SetActive(true);
         mainMenuPanel.SetActive(false);
+        settingsPanel.SetActive(false);
+    }
+    
+    public void Settings()
+    {
+        creditsPanel.SetActive(false);
+        mainMenuPanel.SetActive(false);
+        settingsPanel.SetActive(true);
     }
 
     public void StartGame()
