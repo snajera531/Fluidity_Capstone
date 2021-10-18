@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
     public float jumpForce = 10f;
     public bool facingRight = true;
     public bool paused = false;
+    public bool selected = false;
 
     public eColor currentColor = eColor.RED;
     public Transform groundCheck;

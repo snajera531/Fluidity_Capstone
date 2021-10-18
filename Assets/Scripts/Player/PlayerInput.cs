@@ -12,7 +12,7 @@ public class PlayerInput : MonoBehaviour
     {
         player.rb.velocity = new Vector2(player.x * player.speed, player.rb.velocity.y);
 
-        if (player!.facingRight && player.x > 0f)
+        if (!player.facingRight && player.x > 0f)
         {
             FlipPlayer();
         } else if (player.facingRight && player.x < 0f)
@@ -42,6 +42,16 @@ public class PlayerInput : MonoBehaviour
         if (!player.paused)
         {
             player.x = context.ReadValue<Vector2>().x;
+        }
+    }
+
+    public void Select(InputAction.CallbackContext context)
+    {
+        if (!player.selected)
+        {
+            //when p is close enough to an npc,
+            //selected = true & dialogue pops up, p can choose options w/ arrows? mvmt gets locked
+            Debug.Log("Select xP");
         }
     }
 
@@ -107,6 +117,6 @@ public class PlayerInput : MonoBehaviour
     private void FlipPlayer()
     {
         player.facingRight = !player.facingRight;
-        player.sprite.flipX = true;
+        player.sprite.flipX = !player.sprite.flipX;
     }
 }
