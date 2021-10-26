@@ -25,9 +25,13 @@ public class UIManager : MonoBehaviour
     }
     #endregion
 
+    //main menu panels
     public GameObject creditsPanel;
     public GameObject mainMenuPanel;
-    public GameObject settingsPanel;
+    public GameObject settingsMainPanel;
+    //game menu panels
+    public GameObject pausePanel;
+    public GameObject settingsGamePanel;
 
     void Start()
     {
@@ -35,28 +39,29 @@ public class UIManager : MonoBehaviour
         Cursor.visible = true;
         creditsPanel.SetActive(false);
         mainMenuPanel.SetActive(true);
-        settingsPanel.SetActive(false);
+        settingsMainPanel.SetActive(false);
     }
 
+    //main menu ui functions
     public void MainMenu()
     {
         creditsPanel.SetActive(false);
         mainMenuPanel.SetActive(true);
-        settingsPanel.SetActive(false);
+        settingsMainPanel.SetActive(false);
     }
 
     public void Credits()
     {
         creditsPanel.SetActive(true);
         mainMenuPanel.SetActive(false);
-        settingsPanel.SetActive(false);
+        settingsMainPanel.SetActive(false);
     }
     
-    public void Settings()
+    public void SettingsMain()
     {
         creditsPanel.SetActive(false);
         mainMenuPanel.SetActive(false);
-        settingsPanel.SetActive(true);
+        settingsMainPanel.SetActive(true);
     }
 
     public void StartGame()
@@ -69,5 +74,26 @@ public class UIManager : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
+    }
+
+    //game ui functions
+    public void Pause()
+    {
+        Cursor.visible = true;
+        pausePanel.SetActive(true);
+        settingsGamePanel.SetActive(false);
+    }
+
+    public void ExitPause()
+    {
+        Cursor.visible = false;
+        pausePanel.SetActive(false);
+        settingsGamePanel.SetActive(false);
+    }
+
+    public void SettingsGame()
+    {
+        pausePanel.SetActive(false);
+        settingsGamePanel.SetActive(true);
     }
 }
