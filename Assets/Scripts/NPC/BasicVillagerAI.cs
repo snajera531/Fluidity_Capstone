@@ -1,8 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasicVillagerAI : MonoBehaviour
+public abstract class BasicVillagerAI : MonoBehaviour
 {
     public enum eColor
     {
@@ -11,9 +12,9 @@ public class BasicVillagerAI : MonoBehaviour
         BLUE
     }
 
-    public float x;
-    public float speed = 5f;
-    public bool facingRight = true;
-    public bool paused = false;
-    public Rigidbody2D rb;
+    public float X { get; set; }
+    public float Speed { get; set; }
+    public bool FacingRight { get; set; }
+    public bool Paused { get; set; }
+    public Rigidbody2D Rb { get; set; }
 }

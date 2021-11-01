@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
-public class UIManager : MonoBehaviour
+public class UIManager_MainMenu : MonoBehaviour
 {
     #region Singleton
-    private static UIManager _instance;
+    private static UIManager_MainMenu _instance;
 
-    public static UIManager Instance { get { return _instance; } }
+    public static UIManager_MainMenu Instance { get { return _instance; } }
 
     private void Awake()
     {
@@ -29,9 +29,6 @@ public class UIManager : MonoBehaviour
     public GameObject creditsPanel;
     public GameObject mainMenuPanel;
     public GameObject settingsMainPanel;
-    //game menu panels
-    public GameObject pausePanel;
-    public GameObject settingsGamePanel;
 
     void Start()
     {
@@ -74,26 +71,5 @@ public class UIManager : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
-    }
-
-    //game ui functions
-    public void Pause()
-    {
-        Cursor.visible = true;
-        pausePanel.SetActive(true);
-        settingsGamePanel.SetActive(false);
-    }
-
-    public void ExitPause()
-    {
-        Cursor.visible = false;
-        pausePanel.SetActive(false);
-        settingsGamePanel.SetActive(false);
-    }
-
-    public void SettingsGame()
-    {
-        pausePanel.SetActive(false);
-        settingsGamePanel.SetActive(true);
     }
 }

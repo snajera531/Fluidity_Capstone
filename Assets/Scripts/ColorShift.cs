@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-//basically, i want a shifting rainbow glow on the title for the game
-//so that is what this script is here for
 public class ColorShift : MonoBehaviour
 {
     public Gradient gradient;
