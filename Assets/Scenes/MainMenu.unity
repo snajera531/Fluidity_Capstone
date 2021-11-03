@@ -3237,7 +3237,7 @@ RectTransform:
   m_GameObject: {fileID: 1101978587}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children:
   - {fileID: 1653995189}
   m_Father: {fileID: 897523338}
@@ -3348,7 +3348,7 @@ RectTransform:
   m_GameObject: {fileID: 1269062523}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children:
   - {fileID: 541203684}
   m_Father: {fileID: 941627263}
@@ -3525,7 +3525,7 @@ RectTransform:
   m_GameObject: {fileID: 1501814549}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children:
   - {fileID: 575062740}
   m_Father: {fileID: 837434303}
@@ -3613,10 +3613,11 @@ MonoBehaviour:
 
     freesound.org - Music
 
-    Luis Zuno / @ansimuz - Background Art
+    Luis Zuno (@ansimuz) and @zlzhang (Deviantart)
+    - Background Art
 
-    Cole
-    D., Kasey C., and Matthew C. - Emotional Support / Testing
+    Cole D., Kasey C., and Matthew C. - Emotional Support /
+    Testing
 
 '
 --- !u!222 &1515424213
@@ -4214,7 +4215,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1735842092
 RectTransform:
   m_ObjectHideFlags: 0
