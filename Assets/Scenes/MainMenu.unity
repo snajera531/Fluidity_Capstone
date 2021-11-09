@@ -228,7 +228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6335038328556851509, guid: e397534993a3daa4fb62356a2b6e1856, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -150
+      value: -300
       objectReference: {fileID: 0}
     - target: {fileID: 6335038328556851509, guid: e397534993a3daa4fb62356a2b6e1856, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -300,15 +300,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6335038328556851511, guid: e397534993a3daa4fb62356a2b6e1856, type: 3}
       propertyPath: m_Color.b
-      value: 0.28235295
+      value: 0.08235294
       objectReference: {fileID: 0}
     - target: {fileID: 6335038328556851511, guid: e397534993a3daa4fb62356a2b6e1856, type: 3}
       propertyPath: m_Color.g
-      value: 0.28235295
+      value: 0.08235294
       objectReference: {fileID: 0}
     - target: {fileID: 6335038328556851511, guid: e397534993a3daa4fb62356a2b6e1856, type: 3}
       propertyPath: m_Color.r
-      value: 0.28235295
+      value: 0.08235294
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e397534993a3daa4fb62356a2b6e1856, type: 3}
@@ -340,14 +340,14 @@ RectTransform:
   m_GameObject: {fileID: 53392569}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 12, y: 12, z: 1}
+  m_LocalScale: {x: 14, y: 14, z: 1}
   m_Children: []
   m_Father: {fileID: 172522891}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -50}
+  m_AnchoredPosition: {x: 0, y: -75}
   m_SizeDelta: {x: 0, y: 200}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &53392571
@@ -570,14 +570,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 1}
+  m_Color: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d26f4f125235142d4af2761d3fa66dbb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5b29e09ce71332f4781c1e65a3825435, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -922,7 +922,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6335038328556851509, guid: e397534993a3daa4fb62356a2b6e1856, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 150
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6335038328556851509, guid: e397534993a3daa4fb62356a2b6e1856, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -994,15 +994,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6335038328556851511, guid: e397534993a3daa4fb62356a2b6e1856, type: 3}
       propertyPath: m_Color.b
-      value: 0.2830189
+      value: 0.34901962
       objectReference: {fileID: 0}
     - target: {fileID: 6335038328556851511, guid: e397534993a3daa4fb62356a2b6e1856, type: 3}
       propertyPath: m_Color.g
-      value: 0.2830189
+      value: 0.34901962
       objectReference: {fileID: 0}
     - target: {fileID: 6335038328556851511, guid: e397534993a3daa4fb62356a2b6e1856, type: 3}
       propertyPath: m_Color.r
-      value: 0.2830189
+      value: 0.34901962
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e397534993a3daa4fb62356a2b6e1856, type: 3}
@@ -2721,7 +2721,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6335038328556851509, guid: e397534993a3daa4fb62356a2b6e1856, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -150
       objectReference: {fileID: 0}
     - target: {fileID: 6335038328556851509, guid: e397534993a3daa4fb62356a2b6e1856, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2793,15 +2793,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6335038328556851511, guid: e397534993a3daa4fb62356a2b6e1856, type: 3}
       propertyPath: m_Color.b
-      value: 0.07450981
+      value: 0.13725491
       objectReference: {fileID: 0}
     - target: {fileID: 6335038328556851511, guid: e397534993a3daa4fb62356a2b6e1856, type: 3}
       propertyPath: m_Color.g
-      value: 0.07450981
+      value: 0.13725491
       objectReference: {fileID: 0}
     - target: {fileID: 6335038328556851511, guid: e397534993a3daa4fb62356a2b6e1856, type: 3}
       propertyPath: m_Color.r
-      value: 0.07450981
+      value: 0.13725491
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e397534993a3daa4fb62356a2b6e1856, type: 3}
@@ -3570,7 +3570,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -100}
+  m_AnchoredPosition: {x: 0, y: -75}
   m_SizeDelta: {x: 350, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1515424212
@@ -3614,10 +3614,10 @@ MonoBehaviour:
     freesound.org - Music
 
     Luis Zuno (@ansimuz) and @zlzhang (Deviantart)
-    - Background Art
+    - Scenery Art
 
-    Cole D., Kasey C., and Matthew C. - Emotional Support /
-    Testing
+
+    Cole D., Kasey C., and Matthew C. - Emotional Support / Testing
 
 '
 --- !u!222 &1515424213
@@ -3662,7 +3662,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 125}
+  m_AnchoredPosition: {x: 0, y: 150}
   m_SizeDelta: {x: 350, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1526469759
@@ -3848,7 +3848,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6335038328556851509, guid: e397534993a3daa4fb62356a2b6e1856, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -150
       objectReference: {fileID: 0}
     - target: {fileID: 6335038328556851509, guid: e397534993a3daa4fb62356a2b6e1856, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3920,15 +3920,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6335038328556851511, guid: e397534993a3daa4fb62356a2b6e1856, type: 3}
       propertyPath: m_Color.b
-      value: 0.0754717
+      value: 0.13725491
       objectReference: {fileID: 0}
     - target: {fileID: 6335038328556851511, guid: e397534993a3daa4fb62356a2b6e1856, type: 3}
       propertyPath: m_Color.g
-      value: 0.0754717
+      value: 0.13725491
       objectReference: {fileID: 0}
     - target: {fileID: 6335038328556851511, guid: e397534993a3daa4fb62356a2b6e1856, type: 3}
       propertyPath: m_Color.r
-      value: 0.0754717
+      value: 0.13725491
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e397534993a3daa4fb62356a2b6e1856, type: 3}
@@ -4215,7 +4215,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1735842092
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4304,7 +4304,7 @@ RectTransform:
   m_GameObject: {fileID: 1740690047}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 12, y: 12, z: 1}
+  m_LocalScale: {x: 14, y: 14, z: 1}
   m_Children: []
   m_Father: {fileID: 1735842092}
   m_RootOrder: 0
@@ -4335,7 +4335,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9bbdf943575734e2a8241b76365434db, type: 2}
+    m_Font: {fileID: 12800000, guid: 993c45e46867d4d2d84d741c0974e923, type: 2}
     m_FontSize: 0
     m_FontStyle: 0
     m_BestFit: 0
