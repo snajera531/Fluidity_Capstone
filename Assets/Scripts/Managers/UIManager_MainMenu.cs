@@ -25,6 +25,8 @@ public class UIManager_MainMenu : MonoBehaviour
     }
     #endregion
 
+    public Animator transition;
+    public int transitionTime = 1;
     //main menu panels
     public GameObject creditsPanel;
     public GameObject mainMenuPanel;
@@ -65,6 +67,15 @@ public class UIManager_MainMenu : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
+        StartCoroutine(LoadGame());
+    }
+
+    IEnumerator LoadGame()
+    {
+        transition.SetTrigger("Start");
+
+        yield return new WaitForSeconds(transitionTime);
+
         SceneManager.LoadScene(1);
     }
 

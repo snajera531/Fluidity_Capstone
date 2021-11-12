@@ -32,10 +32,11 @@ public class UIManager_InGame : MonoBehaviour
         SFX
     }
 
+    public Animator transition;
+    public int transitionTime = 1;
     public GameObject pausePanel;
     public GameObject settingsGamePanel;
-
-
+    DialogueManager dialogueManager;
 
     void Start()
     {
@@ -47,6 +48,15 @@ public class UIManager_InGame : MonoBehaviour
 
     public void MainMenu()
     {
+        StartCoroutine(LoadMainMenu());
+    }
+
+    IEnumerator LoadMainMenu()
+    {
+        transition.SetTrigger("Start");
+
+        yield return new WaitForSeconds(transitionTime);
+
         SceneManager.LoadScene(0);
     }
 
@@ -93,18 +103,21 @@ public class UIManager_InGame : MonoBehaviour
     public void SmallFontSize()
     {
         //change all font sizes to small  
-        Debug.Log("small font");
+        //Debug.Log("small font");
+        dialogueManager.ChangeFontSize(dialogueManager.smallFont);
     }
     
     public void MediumFontSize()
     {
         //change all font sizes to medium  
-        Debug.Log("medium font");
+        //Debug.Log("medium font");
+        dialogueManager.ChangeFontSize(dialogueManager.mediumFont);
     }
 
     public void LargeFontSize()
     {
         //change all font sizes to large 
-        Debug.Log("large font");
+        //Debug.Log("large font");
+        dialogueManager.ChangeFontSize(dialogueManager.largeFont);
     }
 }

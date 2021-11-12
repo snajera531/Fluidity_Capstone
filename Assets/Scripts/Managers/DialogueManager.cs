@@ -9,12 +9,21 @@ public class DialogueManager : MonoBehaviour
     public Animator anim;
     public Text txtName;
     public Text txtDialogue;
+    public Vector3 smallFont = new Vector3(3, 3, 1);
+    public Vector3 mediumFont = new Vector3(4, 4, 1);
+    public Vector3 largeFont = new Vector3(5, 5, 1);
 
     private Queue<string> sentences;
 
     void Start()
     {
         sentences = new Queue<string>();
+    }
+
+    public void ChangeFontSize(Vector3 fontSize)
+    {
+        txtName.transform.localScale = fontSize;
+        txtDialogue.transform.localScale = fontSize;
     }
 
     public void StartDialogue(Dialogue dia)
