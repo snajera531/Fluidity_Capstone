@@ -3196,6 +3196,12 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
   - loop: 0
+    name: Player_NewColor
+    clip: {fileID: 8300000, guid: 3c5fdb5e67b3e7247af4698f6d9ad377, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - loop: 0
     name: Player_Step1
     clip: {fileID: 8300000, guid: a5630c86e7bddbf42a40a1a2ab972a7f, type: 3}
     volume: 0.5
@@ -3654,13 +3660,14 @@ MonoBehaviour:
     Unity Asset Store - Environmental Art, UI
     Assets
 
-    freesound.org - Music
+    freesound.org & kenney.nl - Music and Sounds
 
-    Luis Zuno (@ansimuz) and @zlzhang (Deviantart)
-    - Scenery Art
+    Luis Zuno (@ansimuz)
+    and @zlzhang (Deviantart) - Scenery Art
 
 
-    Cole D., Kasey C., and Matthew C. - Emotional Support / Testing
+    Cole D., Kasey C., and Matthew
+    C. - Emotional Support / Testing
 
 '
 --- !u!222 &1515424213

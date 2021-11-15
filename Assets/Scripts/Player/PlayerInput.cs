@@ -140,24 +140,28 @@ public class PlayerInput : MonoBehaviour
             {
                 case "RedSymbol":
                     player.hasRed = true;
+                    player.currentColor = Player.eColor.RED;
                     break;
                 case "GreenSymbol":
                     player.hasGreen = true;
+                    player.currentColor = Player.eColor.GREEN;
                     break;
                 case "BlueSymbol":
                     player.hasBlue = true;
+                    player.currentColor = Player.eColor.BLUE;
                     break;
                 default:
                     break;
             }
 
+            AudioManager.Instance.Play("Player_NewColor");
             Destroy(collision.gameObject);
         }
 
-        if(collision.gameObject.layer == 3)
+        if(collision.gameObject.tag == "Ground")
         {
             AudioManager.Instance.Play("Player_Step1");
-        } else if (collision.gameObject.layer == 9)
+        } else if (collision.gameObject.tag == "Platform")
         {
             AudioManager.Instance.Play("Player_StepWood");
         }
