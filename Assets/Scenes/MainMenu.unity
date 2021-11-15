@@ -3195,6 +3195,36 @@ MonoBehaviour:
     volume: 0.05
     pitch: 1
     source: {fileID: 0}
+  - loop: 0
+    name: Player_Step1
+    clip: {fileID: 8300000, guid: a5630c86e7bddbf42a40a1a2ab972a7f, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - loop: 0
+    name: Player_Step2
+    clip: {fileID: 8300000, guid: 328368de2344d4642aa1b90e3efcc684, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - loop: 0
+    name: Player_Step3
+    clip: {fileID: 8300000, guid: 42522e84a527cb8498578f2cae054f96, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - loop: 0
+    name: Player_Step4
+    clip: {fileID: 8300000, guid: aad61c15cb4f3054f996c6b40b76f4c9, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - loop: 0
+    name: Player_Step5
+    clip: {fileID: 8300000, guid: 69619afbbccf1b648b732adc4935f41a, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
 --- !u!4 &988929292
 Transform:
   m_ObjectHideFlags: 0
