@@ -3225,6 +3225,12 @@ MonoBehaviour:
     volume: 0.5
     pitch: 1
     source: {fileID: 0}
+  - loop: 0
+    name: Player_StepWood
+    clip: {fileID: 8300000, guid: 1c9ff186eddf64942aa019240fe0fb82, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
 --- !u!4 &988929292
 Transform:
   m_ObjectHideFlags: 0

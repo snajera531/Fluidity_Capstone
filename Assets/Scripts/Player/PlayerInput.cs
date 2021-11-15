@@ -7,7 +7,8 @@ public class PlayerInput : MonoBehaviour
 {
     public Player player;
     public LayerMask groundLayer;
-    int stepTime = 2;
+    int stepTime = 400;
+    int steps = 2;
 
     private void Update()
     {
@@ -21,10 +22,15 @@ public class PlayerInput : MonoBehaviour
             FlipPlayer();
         }
 
-        if (Grounded())
+        if (Grounded() && stepTime <= 0 && player.rb.velocity != new Vector2(0, 0))
         {
-            AudioManager.Instance.Play("Player_Step" + Random.Range(2, 6));
+            AudioManager.Instance.Play("Player_Step" + steps);
+            stepTime = 400;
+            if (steps >= 5) {steps = 2;} 
+            else { steps++; }
         }
+
+        steps--;
     }
 
     public void Jump(InputAction.CallbackContext context)
@@ -150,8 +156,10 @@ public class PlayerInput : MonoBehaviour
 
         if(collision.gameObject.layer == 3)
         {
-
             AudioManager.Instance.Play("Player_Step1");
+        } else if (collision.gameObject.layer == 9)
+        {
+            AudioManager.Instance.Play("Player_StepWood");
         }
     }
 }

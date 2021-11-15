@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8469994845832728240}
   - component: {fileID: 1342127890221265324}
   - component: {fileID: 192854226184509151}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: BaseBlackPlatform
   m_TagString: Ground
   m_Icon: {fileID: 0}
