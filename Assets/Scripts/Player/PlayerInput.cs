@@ -7,6 +7,7 @@ public class PlayerInput : MonoBehaviour
 {
     public Player player;
     public LayerMask groundLayer;
+    int stepTime = 2;
 
     private void Update()
     {
@@ -18,6 +19,11 @@ public class PlayerInput : MonoBehaviour
         } else if (player.facingRight && player.x < 0f)
         {
             FlipPlayer();
+        }
+
+        if (Grounded())
+        {
+            AudioManager.Instance.Play("Player_Step" + Random.Range(2, 6));
         }
     }
 
@@ -71,15 +77,15 @@ public class PlayerInput : MonoBehaviour
     {
         if (!player.paused)
         {
-            if (player.currentColor == Player.eColor.RED && context.performed)
+            if (player.currentColor == Player.eColor.RED && context.performed && player.hasBlue)
             {
                 player.currentColor = Player.eColor.BLUE;
             }
-            else if (player.currentColor == Player.eColor.GREEN && context.performed)
+            else if (player.currentColor == Player.eColor.GREEN && context.performed && player.hasRed)
             {
                 player.currentColor = Player.eColor.RED;
             }
-            else if (player.currentColor == Player.eColor.BLUE && context.performed)
+            else if (player.currentColor == Player.eColor.BLUE && context.performed && player.hasGreen)
             {
                 player.currentColor = Player.eColor.GREEN;
             }
@@ -92,15 +98,15 @@ public class PlayerInput : MonoBehaviour
     {
         if (!player.paused)
         {
-            if (player.currentColor == Player.eColor.RED && context.performed)
+            if (player.currentColor == Player.eColor.RED && context.performed && player.hasGreen)
             {
                 player.currentColor = Player.eColor.GREEN;
             }
-            else if (player.currentColor == Player.eColor.GREEN && context.performed)
+            else if (player.currentColor == Player.eColor.GREEN && context.performed && player.hasBlue)
             {
                 player.currentColor = Player.eColor.BLUE;
             }
-            else if (player.currentColor == Player.eColor.BLUE && context.performed)
+            else if (player.currentColor == Player.eColor.BLUE && context.performed && player.hasRed)
             {
                 player.currentColor = Player.eColor.RED;
             }
@@ -118,5 +124,34 @@ public class PlayerInput : MonoBehaviour
     {
         player.facingRight = !player.facingRight;
         player.sprite.flipX = !player.sprite.flipX;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Color Object")
+        {
+            switch (collision.gameObject.name)
+            {
+                case "RedSymbol":
+                    player.hasRed = true;
+                    break;
+                case "GreenSymbol":
+                    player.hasGreen = true;
+                    break;
+                case "BlueSymbol":
+                    player.hasBlue = true;
+                    break;
+                default:
+                    break;
+            }
+
+            Destroy(collision.gameObject);
+        }
+
+        if(collision.gameObject.layer == 3)
+        {
+
+            AudioManager.Instance.Play("Player_Step1");
+        }
     }
 }
