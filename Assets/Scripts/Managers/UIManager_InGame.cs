@@ -62,14 +62,12 @@ public class UIManager_InGame : MonoBehaviour
 
     public void Pause()
     {
-        Cursor.visible = true;
         pausePanel.SetActive(true);
         settingsGamePanel.SetActive(false);
     }
 
     public void ExitPause()
     {
-        Cursor.visible = false;
         pausePanel.SetActive(false);
         settingsGamePanel.SetActive(false);
     }
