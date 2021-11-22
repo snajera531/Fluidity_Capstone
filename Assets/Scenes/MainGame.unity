@@ -14669,6 +14669,9 @@ MonoBehaviour:
   transitionTime: 1
   pausePanel: {fileID: 883742869}
   settingsGamePanel: {fileID: 944411194}
+  musicVolume: {fileID: 1717955905}
+  narrationVolume: {fileID: 484835537}
+  sfxVolume: {fileID: 1829677800}
 --- !u!4 &1716896793
 Transform:
   m_ObjectHideFlags: 0

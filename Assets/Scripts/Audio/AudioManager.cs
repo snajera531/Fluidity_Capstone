@@ -54,4 +54,12 @@ public class AudioManager : MonoBehaviour
             Debug.LogError($"{name} could not be found.");
         }
     }
+
+    public void AdjustVolume(float volume, int[] soundVolsToChange)
+    {
+        foreach(int s in soundVolsToChange)
+        {
+            sounds[s].source.volume = volume;
+        }
+    }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class UIManager_InGame : MonoBehaviour
@@ -37,6 +38,14 @@ public class UIManager_InGame : MonoBehaviour
     public GameObject pausePanel;
     public GameObject settingsGamePanel;
     DialogueManager dialogueManager;
+    public Text txtExample;
+
+    public Slider musicVolume;
+    public Slider narrationVolume;
+    public Slider sfxVolume;
+    int[] musicSounds = new int[] { 0 };
+    int[] narrationSounds = new int[] {  };
+    int[] sfxSounds = new int[] { 1, 2, 3, 4, 5, 6, 7, 8 };
 
     void Start()
     {
@@ -44,6 +53,10 @@ public class UIManager_InGame : MonoBehaviour
         Cursor.visible = true;
         pausePanel.SetActive(false);
         settingsGamePanel.SetActive(false);
+
+        musicVolume.value = 0.05f;
+        narrationVolume.value = 0.05f;
+        sfxVolume.value = 0.05f;
     }
 
     public void MainMenu()
@@ -82,19 +95,22 @@ public class UIManager_InGame : MonoBehaviour
     public void AdjustMusicVolume()
     {
         //raise or lower volume based on the slider that was adjusted
-        Debug.Log("music volume changed");
+        //Debug.Log("music volume changed");
+        AudioManager.Instance.AdjustVolume(musicVolume.value, musicSounds);
     }
     
     public void AdjustNarrationVolume()
     {
         //raise or lower volume based on the slider that was adjusted
-        Debug.Log("narration volume changed");
+        //Debug.Log("narration volume changed");
+        AudioManager.Instance.AdjustVolume(narrationVolume.value, narrationSounds);
     }
     
     public void AdjustSFXVolume()
     {
         //raise or lower volume based on the slider that was adjusted
-        Debug.Log("sfx volume changed");
+        //Debug.Log("sfx volume changed");
+        AudioManager.Instance.AdjustVolume(sfxVolume.value, sfxSounds);
     }
 
     //pass in size to change font size to
@@ -102,20 +118,20 @@ public class UIManager_InGame : MonoBehaviour
     {
         //change all font sizes to small  
         //Debug.Log("small font");
-        dialogueManager.ChangeFontSize(dialogueManager.smallFont);
+        txtExample.gameObject.transform.localScale = dialogueManager.smallFont;
     }
-    
+
     public void MediumFontSize()
     {
         //change all font sizes to medium  
         //Debug.Log("medium font");
-        dialogueManager.ChangeFontSize(dialogueManager.mediumFont);
+        txtExample.gameObject.transform.localScale = dialogueManager.mediumFont;
     }
 
     public void LargeFontSize()
     {
         //change all font sizes to large 
         //Debug.Log("large font");
-        dialogueManager.ChangeFontSize(dialogueManager.largeFont);
+        txtExample.gameObject.transform.localScale = dialogueManager.largeFont;
     }
 }

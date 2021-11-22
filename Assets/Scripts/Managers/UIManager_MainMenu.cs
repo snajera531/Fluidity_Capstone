@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class UIManager_MainMenu : MonoBehaviour
@@ -32,6 +33,18 @@ public class UIManager_MainMenu : MonoBehaviour
     public GameObject mainMenuPanel;
     public GameObject settingsMainPanel;
 
+    public Text txtExample;
+    public Vector3 smallFont = new Vector3(0.5f, 0.5f, 1f);
+    public Vector3 mediumFont = new Vector3(0.6f, 0.6f, 1f);
+    public Vector3 largeFont = new Vector3(0.7f, 0.7f, 1f);
+
+    public Slider musicVolume;
+    public Slider narrationVolume;
+    public Slider sfxVolume;
+    int[] musicSounds = new int[] { 0 };
+    int[] narrationSounds = new int[] { };
+    int[] sfxSounds = new int[] { 1, 2, 3, 4, 5, 6, 7, 8 };
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.None;
@@ -39,6 +52,10 @@ public class UIManager_MainMenu : MonoBehaviour
         creditsPanel.SetActive(false);
         mainMenuPanel.SetActive(true);
         settingsMainPanel.SetActive(false);
+
+        musicVolume.value = 0.05f;
+        narrationVolume.value = 0.05f;
+        sfxVolume.value = 0.05f;
     }
 
     //main menu ui functions
@@ -82,5 +99,48 @@ public class UIManager_MainMenu : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
+    }
+
+    public void AdjustMusicVolume()
+    {
+        //raise or lower volume based on the slider that was adjusted
+        //Debug.Log("music volume changed");
+        AudioManager.Instance.AdjustVolume(musicVolume.value, musicSounds);
+    }
+
+    public void AdjustNarrationVolume()
+    {
+        //raise or lower volume based on the slider that was adjusted
+        //Debug.Log("narration volume changed");
+        AudioManager.Instance.AdjustVolume(narrationVolume.value, narrationSounds);
+    }
+
+    public void AdjustSFXVolume()
+    {
+        //raise or lower volume based on the slider that was adjusted
+        //Debug.Log("sfx volume changed");
+        AudioManager.Instance.AdjustVolume(sfxVolume.value, sfxSounds);
+    }
+
+    //pass in size to change font size to
+    public void SmallFontSize()
+    {
+        //change all font sizes to small  
+        //Debug.Log("small font");
+        txtExample.gameObject.transform.localScale = smallFont;
+    }
+
+    public void MediumFontSize()
+    {
+        //change all font sizes to medium  
+        //Debug.Log("medium font");
+        txtExample.gameObject.transform.localScale = mediumFont;
+    }
+
+    public void LargeFontSize()
+    {
+        //change all font sizes to large 
+        //Debug.Log("large font");
+        txtExample.gameObject.transform.localScale = largeFont;
     }
 }
