@@ -38,7 +38,12 @@ public class UIManager_InGame : MonoBehaviour
     public GameObject pausePanel;
     public GameObject settingsGamePanel;
     DialogueManager dialogueManager;
+
     public Text txtExample;
+    public Vector3 smallFont = new Vector3(0.6f, 0.6f, 1f);
+    public Vector3 mediumFont = new Vector3(0.7f, 0.7f, 1f);
+    public Vector3 largeFont = new Vector3(0.8f, 0.8f, 1f);
+    public Vector3 CurrentFontSize { get; set; }
 
     public Slider musicVolume;
     public Slider narrationVolume;
@@ -57,6 +62,8 @@ public class UIManager_InGame : MonoBehaviour
         musicVolume.value = 0.05f;
         narrationVolume.value = 0.05f;
         sfxVolume.value = 0.05f;
+        CurrentFontSize = mediumFont;
+        txtExample.gameObject.transform.localScale = CurrentFontSize;
     }
 
     public void MainMenu()
@@ -118,20 +125,23 @@ public class UIManager_InGame : MonoBehaviour
     {
         //change all font sizes to small  
         //Debug.Log("small font");
-        txtExample.gameObject.transform.localScale = dialogueManager.smallFont;
+        CurrentFontSize = smallFont;
+        txtExample.gameObject.transform.localScale = CurrentFontSize;
     }
 
     public void MediumFontSize()
     {
         //change all font sizes to medium  
         //Debug.Log("medium font");
-        txtExample.gameObject.transform.localScale = dialogueManager.mediumFont;
+        CurrentFontSize = mediumFont;
+        txtExample.gameObject.transform.localScale = CurrentFontSize;
     }
 
     public void LargeFontSize()
     {
         //change all font sizes to large 
         //Debug.Log("large font");
-        txtExample.gameObject.transform.localScale = dialogueManager.largeFont;
+        CurrentFontSize = largeFont;
+        txtExample.gameObject.transform.localScale = CurrentFontSize;
     }
 }
