@@ -73,7 +73,7 @@ public class PlayerInput : MonoBehaviour
         {
             GameManager.Instance.PauseMenu();
         }
-        else if(context.performed && GameManager.Instance.pauseMenuPanel.activeInHierarchy)
+        else if(context.performed && GameManager.Instance.pauseMenuPanel.activeInHierarchy && !UIManager_InGame.Instance.settingsGamePanel.activeInHierarchy)
         {
             GameManager.Instance.ExitPause();
         }

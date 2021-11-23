@@ -86,12 +86,6 @@ public class UIManager_InGame : MonoBehaviour
         settingsGamePanel.SetActive(false);
     }
 
-    public void ExitPause()
-    {
-        pausePanel.SetActive(false);
-        settingsGamePanel.SetActive(false);
-    }
-
     public void SettingsGame()
     {
         pausePanel.SetActive(false);
