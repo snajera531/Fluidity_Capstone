@@ -7807,7 +7807,7 @@ MonoBehaviour:
   mediumFont: {x: 0.6, y: 0.6, z: 1}
   largeFont: {x: 0.7, y: 0.7, z: 1}
   trigger: {fileID: 929644779}
-  typingSpeed: 2
+  typingSpeed: 0.1
 --- !u!1 &729554154
 GameObject:
   m_ObjectHideFlags: 0
@@ -11035,7 +11035,7 @@ MonoBehaviour:
   mediumFont: {x: 0.6, y: 0.6, z: 1}
   largeFont: {x: 0.7, y: 0.7, z: 1}
   trigger: {fileID: 1758546547}
-  typingSpeed: 2
+  typingSpeed: 0.1
 --- !u!224 &1239113952 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8167457117042023367, guid: 07ba90570d7f4b743a67715b4585cb27, type: 3}
@@ -32261,14 +32261,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear
       objectReference: {fileID: 0}
+    - target: {fileID: 1869770407451222088, guid: 91347d966edfd54458838cc8c55e77af, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1869770407451222088, guid: 91347d966edfd54458838cc8c55e77af, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1869770407451222088, guid: 91347d966edfd54458838cc8c55e77af, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1869770407451222088, guid: 91347d966edfd54458838cc8c55e77af, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 11.784973
+      objectReference: {fileID: 0}
     - target: {fileID: 1869770407451222089, guid: 91347d966edfd54458838cc8c55e77af, type: 3}
       propertyPath: m_Name
+      value: Prompt
+      objectReference: {fileID: 0}
+    - target: {fileID: 1869770407451222135, guid: 91347d966edfd54458838cc8c55e77af, type: 3}
+      propertyPath: m_Text
       value: R
       objectReference: {fileID: 0}
     - target: {fileID: 1869770407451222135, guid: 91347d966edfd54458838cc8c55e77af, type: 3}
       propertyPath: m_FontData.m_Alignment
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1869770407485505128, guid: 91347d966edfd54458838cc8c55e77af, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
     - target: {fileID: 1869770407485505129, guid: 91347d966edfd54458838cc8c55e77af, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.2
@@ -32276,6 +32300,38 @@ PrefabInstance:
     - target: {fileID: 1869770407485505129, guid: 91347d966edfd54458838cc8c55e77af, type: 3}
       propertyPath: m_LocalScale.y
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1869770407485505129, guid: 91347d966edfd54458838cc8c55e77af, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1869770407485505129, guid: 91347d966edfd54458838cc8c55e77af, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1869770407485505129, guid: 91347d966edfd54458838cc8c55e77af, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1869770407485505129, guid: 91347d966edfd54458838cc8c55e77af, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1869770407485505129, guid: 91347d966edfd54458838cc8c55e77af, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1869770407485505129, guid: 91347d966edfd54458838cc8c55e77af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1869770407485505129, guid: 91347d966edfd54458838cc8c55e77af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1869770407485505129, guid: 91347d966edfd54458838cc8c55e77af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}

@@ -180,6 +180,8 @@ public class PlayerInput : MonoBehaviour
             AudioManager.Instance.Play("Player_StepWood");
         } else if (collision.gameObject.tag == "NPC")
         {            
+            //Debug.Log("hi");
+
             nPCs[0].buttonPrompt.SetActive(true);
             nPCsClose.Add(nPCs[0]);
         }
@@ -189,7 +191,7 @@ public class PlayerInput : MonoBehaviour
     {
         if (collision.gameObject.tag == "NPC")
         {
-            Debug.Log("bye");
+            //Debug.Log("bye");
 
             nPCs[0].buttonPrompt.SetActive(true);
 
