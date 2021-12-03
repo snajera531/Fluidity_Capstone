@@ -30,6 +30,9 @@ public class GameManager : MonoBehaviour
     public GameObject[] greyOptions;
     public GameObject[] colorPlatforms;
     public Player player;
+    public DialogueManager introNarrationManager;
+    public DialogueManager dialogueIntroManager;
+    int narrationTracker = 0;
 
     void Start()
     {
@@ -99,7 +102,7 @@ public class GameManager : MonoBehaviour
     public void PauseMenu()
     {
         player.paused = true;
-        Cursor.visible = true;
+        Cursor.visible = false;
         pauseMenuPanel.SetActive(true);
     }
 
@@ -114,5 +117,30 @@ public class GameManager : MonoBehaviour
     {
         Cursor.visible = true;
         SceneManager.LoadScene(0);
+    }
+
+    public void StartNarration1()
+    {
+        introNarrationManager.trigger.TriggerDialogue();
+    }
+    
+
+    public void StartDialogue1()
+    {
+        dialogueIntroManager.trigger.TriggerDialogue();
+    }
+
+    //check if narration/dialogue is active
+    //display next sentence
+    public void ContinueText()
+    {
+        if (introNarrationManager.anim.GetBool("IsOpen"))
+        {
+            introNarrationManager.DisplayNextSentence();
+        }
+        else if (dialogueIntroManager.anim.GetBool("IsOpen"))
+        {
+            dialogueIntroManager.DisplayNextSentence();
+        }
     }
 }

@@ -37,7 +37,6 @@ public class UIManager_InGame : MonoBehaviour
     public int transitionTime = 1;
     public GameObject pausePanel;
     public GameObject settingsGamePanel;
-    DialogueManager dialogueManager;
 
     public Text txtExample;
     public Vector3 smallFont = new Vector3(0.6f, 0.6f, 1f);
@@ -50,7 +49,7 @@ public class UIManager_InGame : MonoBehaviour
     public Slider sfxVolume;
     int[] musicSounds = new int[] { 0 };
     int[] narrationSounds = new int[] {  };
-    int[] sfxSounds = new int[] { 1, 2, 3, 4, 5, 6, 7, 8 };
+    int[] sfxSounds = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
     void Start()
     {
@@ -60,8 +59,8 @@ public class UIManager_InGame : MonoBehaviour
         settingsGamePanel.SetActive(false);
 
         musicVolume.value = 0.05f;
-        narrationVolume.value = 0.05f;
-        sfxVolume.value = 0.05f;
+        narrationVolume.value = 0.5f;
+        sfxVolume.value = 0.5f;
         CurrentFontSize = mediumFont;
         txtExample.gameObject.transform.localScale = CurrentFontSize;
     }

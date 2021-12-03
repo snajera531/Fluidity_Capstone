@@ -7,6 +7,8 @@ public class PlayerInput : MonoBehaviour
 {
     public Player player;
     public LayerMask groundLayer;
+    public List<BasicVillagerAI> nPCs;
+    public List<BasicVillagerAI> nPCsClose;
     int stepTime = 400;
     int steps = 2;
 
@@ -63,8 +65,22 @@ public class PlayerInput : MonoBehaviour
         {
             //when p is close enough to an npc,
             //selected = true & dialogue pops up, p can choose options w/ arrows? mvmt gets locked
-            Debug.Log("Select xP");
+            player.selected = true;
+            if(nPCsClose.Count > 0 && nPCsClose.Contains(nPCs[0]))
+            {
+                GameManager.Instance.StartDialogue1();
+            }
         }
+        else
+        {
+            player.selected = false;
+        }
+    }
+
+    public void Continue (InputAction.CallbackContext context)
+    {
+        //game manager checks activity bc player shouldnt have to :)
+        GameManager.Instance.ContinueText();
     }
 
     public void Pause(InputAction.CallbackContext context)
@@ -156,14 +172,31 @@ public class PlayerInput : MonoBehaviour
 
             AudioManager.Instance.Play("Player_NewColor");
             Destroy(collision.gameObject);
-        }
-
-        if(collision.gameObject.tag == "Ground")
+        } else if (collision.gameObject.tag == "Ground")
         {
             AudioManager.Instance.Play("Player_Step1");
         } else if (collision.gameObject.tag == "Platform")
         {
             AudioManager.Instance.Play("Player_StepWood");
+        } else if (collision.gameObject.tag == "NPC")
+        {            
+            nPCs[0].buttonPrompt.SetActive(true);
+            nPCsClose.Add(nPCs[0]);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "NPC")
+        {
+            Debug.Log("bye");
+
+            nPCs[0].buttonPrompt.SetActive(true);
+
+            if(nPCsClose.Count > 0 )
+            {
+                nPCsClose.Remove(nPCs[0]);
+            }
         }
     }
 }

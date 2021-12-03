@@ -23,9 +23,10 @@ public class BasicVillagerAI : MonoBehaviour
     public GameObject Node1 { get; set; }
     public GameObject Node2 { get; set; }
     public int walkTimer = 10;
+    public GameObject buttonPrompt;
 
-    private void Update()
+    private void Start()
     {
-        
+        buttonPrompt.SetActive(false);
     }
 }

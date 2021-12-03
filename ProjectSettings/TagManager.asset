@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - Color Object
   - Platform
+  - NPC
   layers:
   - Default
   - TransparentFX

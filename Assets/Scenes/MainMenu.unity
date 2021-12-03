@@ -3300,6 +3300,12 @@ MonoBehaviour:
     volume: 0.5
     pitch: 1
     source: {fileID: 0}
+  - loop: 0
+    name: Dialogue_Type
+    clip: {fileID: 8300000, guid: 6d5815e73ef3b7e40b80484f4693b6a8, type: 3}
+    volume: 1
+    pitch: 0.25
+    source: {fileID: 0}
 --- !u!4 &988929292
 Transform:
   m_ObjectHideFlags: 0

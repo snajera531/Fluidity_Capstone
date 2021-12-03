@@ -13,6 +13,9 @@ public class DialogueManager : MonoBehaviour
     public Vector3 mediumFont = new Vector3(0.6f, 0.6f, 1);
     public Vector3 largeFont = new Vector3(0.7f, 0.7f, 1);
 
+    public DialogueTrigger trigger;
+    public float typingSpeed = 0.5f;
+
     private Vector3 currentFontSize;
     private Queue<string> sentences;
 
@@ -63,8 +66,9 @@ public class DialogueManager : MonoBehaviour
         txtDialogue.text = "";
         foreach (char letter in sentence.ToCharArray())
         {
+            AudioManager.Instance.Play("Dialogue_Type");
             txtDialogue.text += letter;
-            yield return null;
+            yield return new WaitForSeconds(typingSpeed);
         }
     }
 
