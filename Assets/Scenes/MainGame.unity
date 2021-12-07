@@ -6922,7 +6922,7 @@ MonoBehaviour:
     sentences:
     - You can see the red too?
     - But I've never seen you around before...
-    - Are there other red people out there?
+    - Are there other red settlements out there?
 --- !u!222 &461483485
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9942,7 +9942,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1869770407087981795, guid: 91347d966edfd54458838cc8c55e77af, type: 3}
       propertyPath: m_Name
-      value: Twink (1)
+      value: Sugar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91347d966edfd54458838cc8c55e77af, type: 3}
