@@ -63,12 +63,23 @@ public class PlayerInput : MonoBehaviour
     {
         if (!player.selected)
         {
-            //when p is close enough to an npc,
-            //selected = true & dialogue pops up, p can choose options w/ arrows? mvmt gets locked
             player.selected = true;
-            if(nPCsClose.Count > 0 && nPCsClose.Contains(nPCs[0]))
+            if(nPCsClose.Count > 0)
             {
-                GameManager.Instance.StartDialogue1();
+                if(player.hasRed)
+                {
+                    if (nPCsClose.Contains(nPCs[1]))
+                    {
+                        GameManager.Instance.StartDialogue2();
+                    }
+                }
+                else
+                {
+                    if (nPCsClose.Contains(nPCs[0]))
+                    {
+                        GameManager.Instance.StartDialogue1();
+                    }
+                }
             }
         }
         else
@@ -179,11 +190,19 @@ public class PlayerInput : MonoBehaviour
         {
             AudioManager.Instance.Play("Player_StepWood");
         } else if (collision.gameObject.tag == "NPC")
-        {            
-            //Debug.Log("hi");
-
-            nPCs[0].buttonPrompt.SetActive(true);
-            nPCsClose.Add(nPCs[0]);
+        {     
+            if(collision.gameObject.name == "Bear")
+            {
+                if (!player.hasRed)
+                {
+                    nPCs[0].buttonPrompt.SetActive(true);
+                    nPCsClose.Add(nPCs[0]);
+                }
+            } else if(collision.gameObject.name == "Twink")
+            {
+                nPCs[1].buttonPrompt.SetActive(true);
+                nPCsClose.Add(nPCs[1]);
+            }
         }
     }
 
@@ -191,13 +210,18 @@ public class PlayerInput : MonoBehaviour
     {
         if (collision.gameObject.tag == "NPC")
         {
-            //Debug.Log("bye");
-
-            nPCs[0].buttonPrompt.SetActive(false);
-
-            if(nPCsClose.Count > 0 )
+            if(nPCsClose.Count > 0)
             {
-                nPCsClose.Remove(nPCs[0]);
+                if (collision.gameObject.name == "Bear")
+                {
+                    nPCs[0].buttonPrompt.SetActive(false);
+                    nPCsClose.Remove(nPCs[0]);
+                }
+                else if (collision.gameObject.name == "Twink")
+                {
+                    nPCs[1].buttonPrompt.SetActive(false);
+                    nPCsClose.Remove(nPCs[1]);
+                }
             }
         }
     }

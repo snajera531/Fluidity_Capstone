@@ -31,7 +31,8 @@ public class GameManager : MonoBehaviour
     public GameObject[] colorPlatforms;
     public Player player;
     public DialogueManager introNarrationManager;
-    public DialogueManager dialogueIntroManager;
+    public DialogueManager dialogue1Manager;
+    public DialogueManager dialogue2Manager;
     int narrationTracker = 0;
 
     void Start()
@@ -128,7 +129,12 @@ public class GameManager : MonoBehaviour
 
     public void StartDialogue1()
     {
-        dialogueIntroManager.trigger.TriggerDialogue();
+        dialogue1Manager.trigger.TriggerDialogue();
+    }
+    
+    public void StartDialogue2()
+    {
+        dialogue2Manager.trigger.TriggerDialogue();
     }
 
     //check if narration/dialogue is active
@@ -139,9 +145,9 @@ public class GameManager : MonoBehaviour
         {
             introNarrationManager.DisplayNextSentence();
         }
-        else if (dialogueIntroManager.anim.GetBool("IsOpen"))
+        else if (dialogue1Manager.anim.GetBool("IsOpen"))
         {
-            dialogueIntroManager.DisplayNextSentence();
+            dialogue1Manager.DisplayNextSentence();
         }
     }
 }
