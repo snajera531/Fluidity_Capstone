@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         pauseMenuPanel.SetActive(false);
+        StartNarration1();
     }
 
     private void Update()

@@ -3738,10 +3738,8 @@ MonoBehaviour:
     to be greyscale.***
 
 
-    Raymond Maple - Amazing Degree Chair / Emotional Support
-
-    Cole,
-    Kasey, Matthew, and Family - Emotional Support / Testing
+    Cole, Kasey, Matthew, Josh, and Family - Emotional
+    Support / Testing
 
 '
 --- !u!222 &1515424213
@@ -4904,18 +4902,6 @@ PrefabInstance:
       value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 8167457117042023367, guid: 07ba90570d7f4b743a67715b4585cb27, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8167457117042023367, guid: 07ba90570d7f4b743a67715b4585cb27, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8167457117042023367, guid: 07ba90570d7f4b743a67715b4585cb27, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8167457117042023367, guid: 07ba90570d7f4b743a67715b4585cb27, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -4961,10 +4947,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8167457117042023367, guid: 07ba90570d7f4b743a67715b4585cb27, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8167457118151075769, guid: 07ba90570d7f4b743a67715b4585cb27, type: 3}
-      propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

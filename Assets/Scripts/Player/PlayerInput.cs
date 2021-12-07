@@ -193,7 +193,7 @@ public class PlayerInput : MonoBehaviour
         {
             //Debug.Log("bye");
 
-            nPCs[0].buttonPrompt.SetActive(true);
+            nPCs[0].buttonPrompt.SetActive(false);
 
             if(nPCsClose.Count > 0 )
             {
