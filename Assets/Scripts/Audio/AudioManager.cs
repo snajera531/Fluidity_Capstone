@@ -62,4 +62,12 @@ public class AudioManager : MonoBehaviour
             sounds[s].source.volume = volume;
         }
     }
+
+    public float[] KeepVolume()
+    {
+        float[] sliderValues = new float[] { 0, 0 };
+        sliderValues[0] = sounds[0].source.volume;
+        sliderValues[1] = sounds[1].source.volume;
+        return sliderValues;
+    }
 }

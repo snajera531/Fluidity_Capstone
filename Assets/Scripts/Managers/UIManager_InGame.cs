@@ -56,8 +56,10 @@ public class UIManager_InGame : MonoBehaviour
         pausePanel.SetActive(false);
         settingsGamePanel.SetActive(false);
 
-        //musicVolume.value = 0.05f;
-        //sfxVolume.value = 0.5f;
+        float[] sliderValues = AudioManager.Instance.KeepVolume();
+        musicVolume.value = sliderValues[0];
+        sfxVolume.value = sliderValues[1];
+
         CurrentFontSize = mediumFont;
         txtExample.gameObject.transform.localScale = CurrentFontSize;
     }
