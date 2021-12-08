@@ -200,8 +200,11 @@ public class PlayerInput : MonoBehaviour
                 }
             } else if(collision.gameObject.name == "Twink")
             {
-                nPCs[1].buttonPrompt.SetActive(true);
-                nPCsClose.Add(nPCs[1]);
+                if (!player.hasGreen)
+                {
+                    nPCs[1].buttonPrompt.SetActive(true);
+                    nPCsClose.Add(nPCs[1]);
+                }
             }
         }
     }
