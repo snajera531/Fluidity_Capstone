@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     public DialogueManager introNarrationManager;
     public DialogueManager dialogue1Manager;
     public DialogueManager dialogue2Manager;
-    int narrationTracker = 0;
+    public DialogueManager dialogue3Manager;
 
     void Start()
     {
@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
         CheckColorStatus();
     }
 
+    #region Color Mechanics
     //colors appearing
     //player finds red village and can select red as a color
     //same conditions for other colors
@@ -99,33 +100,31 @@ public class GameManager : MonoBehaviour
             colorPlatforms[2].SetActive(true);
         }
     }
+    #endregion
 
     //pause menu methods
     public void PauseMenu()
     {
         player.paused = true;
-        Cursor.visible = false;
         pauseMenuPanel.SetActive(true);
     }
 
     public void ExitPause()
     {
         player.paused = false;
-        Cursor.visible = false;
         pauseMenuPanel.SetActive(false);
     }
 
     public void ExitGameToMainMenu()
     {
-        Cursor.visible = true;
         SceneManager.LoadScene(0);
     }
 
     public void StartNarration1()
     {
+        Debug.Log("Boink1");
         introNarrationManager.trigger.TriggerDialogue();
     }
-    
 
     public void StartDialogue1()
     {
@@ -135,6 +134,11 @@ public class GameManager : MonoBehaviour
     public void StartDialogue2()
     {
         dialogue2Manager.trigger.TriggerDialogue();
+    }
+    
+    public void StartDialogue3()
+    {
+        dialogue3Manager.trigger.TriggerDialogue();
     }
 
     //check if narration/dialogue is active
@@ -148,6 +152,14 @@ public class GameManager : MonoBehaviour
         else if (dialogue1Manager.anim.GetBool("IsOpen"))
         {
             dialogue1Manager.DisplayNextSentence();
+        }
+        else if (dialogue2Manager.anim.GetBool("IsOpen"))
+        {
+            dialogue2Manager.DisplayNextSentence();
+        }
+        else if (dialogue3Manager.anim.GetBool("IsOpen"))
+        {
+            dialogue3Manager.DisplayNextSentence();
         }
     }
 }

@@ -45,10 +45,8 @@ public class UIManager_InGame : MonoBehaviour
     public Vector3 CurrentFontSize { get; set; }
 
     public Slider musicVolume;
-    public Slider narrationVolume;
     public Slider sfxVolume;
     int[] musicSounds = new int[] { 0 };
-    int[] narrationSounds = new int[] {  };
     int[] sfxSounds = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
     void Start()
@@ -58,9 +56,8 @@ public class UIManager_InGame : MonoBehaviour
         pausePanel.SetActive(false);
         settingsGamePanel.SetActive(false);
 
-        musicVolume.value = 0.05f;
-        narrationVolume.value = 0.5f;
-        sfxVolume.value = 0.5f;
+        //musicVolume.value = 0.05f;
+        //sfxVolume.value = 0.5f;
         CurrentFontSize = mediumFont;
         txtExample.gameObject.transform.localScale = CurrentFontSize;
     }
@@ -97,13 +94,6 @@ public class UIManager_InGame : MonoBehaviour
         //raise or lower volume based on the slider that was adjusted
         //Debug.Log("music volume changed");
         AudioManager.Instance.AdjustVolume(musicVolume.value, musicSounds);
-    }
-    
-    public void AdjustNarrationVolume()
-    {
-        //raise or lower volume based on the slider that was adjusted
-        //Debug.Log("narration volume changed");
-        AudioManager.Instance.AdjustVolume(narrationVolume.value, narrationSounds);
     }
     
     public void AdjustSFXVolume()

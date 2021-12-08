@@ -24,13 +24,13 @@ public class PlayerInput : MonoBehaviour
             FlipPlayer();
         }
 
-        if (Grounded() && stepTime <= 0 && player.rb.velocity != new Vector2(0, 0))
+        /*if (Grounded() && stepTime <= 0 && player.rb.velocity != new Vector2(0, 0))
         {
             AudioManager.Instance.Play("Player_Step" + steps);
             stepTime = 400;
             if (steps >= 5) {steps = 2;} 
             else { steps++; }
-        }
+        }*/
 
         steps--;
     }
@@ -59,6 +59,7 @@ public class PlayerInput : MonoBehaviour
         }
     }
 
+    #region Select Mechanics
     public void Select(InputAction.CallbackContext context)
     {
         if (!player.selected)
@@ -66,7 +67,14 @@ public class PlayerInput : MonoBehaviour
             player.selected = true;
             if(nPCsClose.Count > 0)
             {
-                if(player.hasRed)
+                if(player.hasGreen && player.hasRed)
+                {
+                    if (nPCsClose.Contains(nPCs[2]))
+                    {
+                        GameManager.Instance.StartDialogue3();
+                    }
+                }
+                else if(player.hasRed)
                 {
                     if (nPCsClose.Contains(nPCs[1]))
                     {
@@ -88,6 +96,60 @@ public class PlayerInput : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "NPC")
+        {
+            if (collision.gameObject.name == "Bear")
+            {
+                if (!player.hasRed)
+                {
+                    nPCs[0].buttonPrompt.SetActive(true);
+                    nPCsClose.Add(nPCs[0]);
+                }
+            }
+            else if (collision.gameObject.name == "Twink")
+            {
+                if (!player.hasGreen)
+                {
+                    nPCs[1].buttonPrompt.SetActive(true);
+                    nPCsClose.Add(nPCs[1]);
+                }
+            }
+            else if (collision.gameObject.name == "Sugar")
+            {
+                nPCs[2].buttonPrompt.SetActive(true);
+                nPCsClose.Add(nPCs[2]);
+            }
+        }
+    }
+    
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "NPC")
+        {
+            if (nPCsClose.Count > 0)
+            {
+                if (collision.gameObject.name == "Bear")
+                {
+                    nPCs[0].buttonPrompt.SetActive(false);
+                    nPCsClose.Remove(nPCs[0]);
+                }
+                else if (collision.gameObject.name == "Twink")
+                {
+                    nPCs[1].buttonPrompt.SetActive(false);
+                    nPCsClose.Remove(nPCs[1]);
+                }
+                else if (collision.gameObject.name == "Sugar")
+                {
+                    nPCs[2].buttonPrompt.SetActive(false);
+                    nPCsClose.Remove(nPCs[2]);
+                }
+            }
+        }
+    }
+    #endregion
+
     public void Continue (InputAction.CallbackContext context)
     {
         //game manager checks activity bc player shouldnt have to :)
@@ -106,8 +168,11 @@ public class PlayerInput : MonoBehaviour
         }
     }
 
+    #region Color Cycling
+    //color cycling
     public void LeftColor(InputAction.CallbackContext context)
     {
+        AudioManager.Instance.Play("UI_Cycle");
         if (!player.paused)
         {
             if (player.currentColor == Player.eColor.RED && context.performed && player.hasBlue)
@@ -129,6 +194,7 @@ public class PlayerInput : MonoBehaviour
 
     public void RightColor(InputAction.CallbackContext context)
     {
+        AudioManager.Instance.Play("UI_Cycle");
         if (!player.paused)
         {
             if (player.currentColor == Player.eColor.RED && context.performed && player.hasGreen)
@@ -147,6 +213,7 @@ public class PlayerInput : MonoBehaviour
             GameManager.Instance.CheckColorStatus();
         }
     }
+    #endregion
 
     private bool Grounded()
     {
@@ -189,43 +256,6 @@ public class PlayerInput : MonoBehaviour
         } else if (collision.gameObject.tag == "Platform")
         {
             AudioManager.Instance.Play("Player_StepWood");
-        } else if (collision.gameObject.tag == "NPC")
-        {     
-            if(collision.gameObject.name == "Bear")
-            {
-                if (!player.hasRed)
-                {
-                    nPCs[0].buttonPrompt.SetActive(true);
-                    nPCsClose.Add(nPCs[0]);
-                }
-            } else if(collision.gameObject.name == "Twink")
-            {
-                if (!player.hasGreen)
-                {
-                    nPCs[1].buttonPrompt.SetActive(true);
-                    nPCsClose.Add(nPCs[1]);
-                }
-            }
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "NPC")
-        {
-            if(nPCsClose.Count > 0)
-            {
-                if (collision.gameObject.name == "Bear")
-                {
-                    nPCs[0].buttonPrompt.SetActive(false);
-                    nPCsClose.Remove(nPCs[0]);
-                }
-                else if (collision.gameObject.name == "Twink")
-                {
-                    nPCs[1].buttonPrompt.SetActive(false);
-                    nPCsClose.Remove(nPCs[1]);
-                }
-            }
         }
     }
 }
